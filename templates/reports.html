@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Reports</title>
+
+<style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial;
+
+}
+
+body{
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#0c4a6e,
+#0284c7
+);
+
+color:white;
+}
+
+.page-content{
+
+margin-left:300px;
+padding:40px;
+}
+
+.report-box{
+
+background:white;
+
+width:500px;
+
+padding:40px;
+
+border-radius:20px;
+
+margin-top:50px;
+
+box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+}
+
+.report-box h2{
+
+color:black;
+margin-bottom:25px;
+}
+
+.download-btn{
+
+background:#2563eb;
+
+padding:15px 35px;
+
+border-radius:10px;
+
+color:white;
+
+text-decoration:none;
+
+font-size:18px;
+}
+
+h1{
+
+font-size:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+{% include "admin_sidebar.html" %}
+
+<div class="page-content">
+
+<h1>Reports</h1>
+
+<div class="report-box">
+
+<h2>
+Download Booking Report
+</h2>
+
+<a href="/download_report"
+class="download-btn">
+
+Download PDF Report
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

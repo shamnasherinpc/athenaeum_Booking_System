@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>My Bookings</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+
+<h2>Athenaeum</h2>
+
+<a href="/booking">
+
+<button class="menu-btn">
+
+Book Auditorium
+
+</button>
+
+</a>
+
+<button class="menu-btn active">
+
+My Bookings
+
+</button>
+
+<a href="/">
+
+<button class="logout">
+
+Logout
+
+</button>
+
+</a>
+
+</div>
+
+<div class="main-content">
+
+<h1>
+
+My Bookings
+
+</h1>
+
+<div class="table-container">
+
+<table>
+
+<tr>
+
+<th>ID</th>
+
+<th>Department</th>
+
+<th>Event</th>
+
+<th>Date</th>
+
+<th>Start</th>
+
+<th>End</th>
+
+<th>Participants</th>
+
+<th>Status</th>
+
+</tr>
+
+{% for row in bookings %}
+
+<tr>
+
+<td>{{row[0]}}</td>
+
+<td>{{row[1]}}</td>
+
+<td>{{row[2]}}</td>
+
+<td>{{row[3]}}</td>
+
+<td>{{row[4]}}</td>
+
+<td>{{row[5]}}</td>
+
+<td>{{row[6]}}</td>
+
+<td>
+
+{% if row[7]=="Approved" %}
+
+<span class="approved">
+
+Approved
+
+</span>
+
+{% elif row[7]=="Rejected" %}
+
+<span class="rejected">
+
+Rejected
+
+</span>
+
+{% else %}
+
+<span class="pending">
+
+Pending
+
+</span>
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

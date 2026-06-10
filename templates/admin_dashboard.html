@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="dashboard-container">
+
+    <div class="sidebar">
+        <h2>Athenaeum</h2>
+
+        <a href="/view_bookings">
+            <button>View Bookings</button>
+        </a>
+
+        <a href="/reports">
+            <button>Reports</button>
+        </a>
+
+        <a href="/">
+            <button class="logout-btn">Logout</button>
+        </a>
+    </div>
+
+    <div class="main-content">
+
+        <h1>Welcome Admin</h1>
+
+        <div class="card-container">
+
+            <div class="dashboard-card">
+                <h2>{{ total_bookings }}</h2>
+                <p>Total Bookings</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>{{ approved_bookings }}</h2>
+                <p>Approved</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>{{ pending_bookings }}</h2>
+                <p>Pending</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>{{ rejected_bookings }}</h2>
+                <p>Rejected</p>
+            </div>
+
+        </div>
+
+        <div class="info-box">
+            <h3>Booking Rules</h3>
+
+            <ul>
+                <li>Booking Time: 09:00 AM to 04:00 PM</li>
+                <li>Saturday and Sunday are disabled</li>
+                <li>Past dates are not allowed</li>
+                <li>Admin can approve or reject bookings</li>
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

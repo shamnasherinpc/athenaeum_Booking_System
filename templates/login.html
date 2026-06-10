@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Login</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static',
+filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="login-card">
+
+<div class="icon">
+
+👤
+
+</div>
+
+<h2>
+
+{{role|capitalize}} Login
+
+</h2>
+
+
+{% if error %}
+
+<p class="error">
+
+{{error}}
+
+</p>
+
+{% endif %}
+
+
+<form action="/authenticate"
+method="POST">
+
+<input
+type="hidden"
+name="role"
+value="{{role}}">
+
+
+{% if role=="admin" %}
+
+<input
+type="text"
+name="username"
+placeholder="Username"
+required>
+
+{% else %}
+
+<input
+type="email"
+name="email"
+placeholder="Email ID"
+required>
+
+{% endif %}
+
+
+<input
+type="password"
+name="password"
+placeholder="Password"
+required>
+
+
+<button
+class="login-btn">
+
+LOGIN
+
+</button>
+
+</form>
+
+
+<br>
+
+
+<a href="/">
+
+<button
+class="back-btn">
+
+Back
+
+</button>
+
+</a>
+
+</div>
+
+</div>
+
+</body>
+
+</html>

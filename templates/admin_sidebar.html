@@ -1,0 +1,120 @@
+<div class="sidebar">
+
+    <h1 class="logo">Athenaeum</h1>
+
+    <a href="/admin_dashboard" class="menu-btn">
+        Dashboard
+    </a>
+
+    <a href="/view_bookings" class="menu-btn">
+        View Bookings
+    </a>
+
+    <a href="/reports" class="menu-btn">
+        Reports
+    </a>
+
+    <a href="/" class="logout-btn">
+        Logout
+    </a>
+
+</div>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(
+135deg,
+#0f172a,
+#0c4a6e,
+#0284c7
+);
+overflow-x:hidden;
+}
+
+.sidebar{
+
+position:fixed;
+left:0;
+top:0;
+
+width:260px;
+height:100vh;
+
+background:rgba(15,23,42,.9);
+
+padding:30px;
+
+box-sizing:border-box;
+
+display:flex;
+flex-direction:column;
+
+z-index:1000;
+}
+
+.logo{
+
+color:white;
+font-size:42px;
+margin-bottom:50px;
+}
+
+.menu-btn{
+
+background:linear-gradient(
+90deg,
+#2563eb,
+#3b82f6
+);
+
+padding:16px;
+margin-bottom:18px;
+
+text-align:center;
+
+border-radius:12px;
+
+text-decoration:none;
+color:white;
+
+font-size:18px;
+
+transition:.3s;
+}
+
+.menu-btn:hover{
+
+transform:translateY(-3px);
+
+}
+
+.logout-btn{
+
+margin-top:auto;
+
+background:#ef4444;
+
+padding:16px;
+
+border-radius:12px;
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+text-align:center;
+}
+
+.page-content{
+
+margin-left:300px;
+padding:40px;
+min-height:100vh;
+}
+
+</style>

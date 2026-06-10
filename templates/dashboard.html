@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Admin Dashboard</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+
+background:linear-gradient(
+135deg,
+#0f172a,
+#0c4a6e,
+#0284c7
+);
+
+min-height:100vh;
+color:white;
+}
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.card{
+
+background:white;
+color:#333;
+
+padding:40px;
+border-radius:20px;
+
+text-align:center;
+
+box-shadow:0 8px 25px rgba(0,0,0,.3);
+
+transition:.4s;
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.number{
+
+font-size:45px;
+font-weight:bold;
+margin-bottom:10px;
+}
+
+.page-content{
+
+margin-left:300px;
+padding:40px;
+}
+
+h1{
+
+margin-bottom:30px;
+font-size:40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+{% include "admin_sidebar.html" %}
+
+<div class="page-content">
+
+<h1>Admin Dashboard</h1>
+
+<div class="cards">
+
+<div class="card">
+<div class="number">
+{{total_bookings}}
+</div>
+Total Bookings
+</div>
+
+<div class="card">
+<div class="number">
+{{approved_bookings}}
+</div>
+Approved
+</div>
+
+<div class="card">
+<div class="number">
+{{pending_bookings}}
+</div>
+Pending
+</div>
+
+<div class="card">
+<div class="number">
+{{rejected_bookings}}
+</div>
+Rejected
+</div>
+
+</div>
+
+</div>
+
+</body>
+</html>
